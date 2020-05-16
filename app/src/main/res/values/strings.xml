@@ -1,3 +1,53 @@
 <resources>
     <string name="app_name">covid19</string>
+    <string name="background">background</string>
+    <string name="selfel">NOACTIONBAR</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="close">close</string>
+
+    <string name="menu_home">Home</string>
+    <string name="mob_no">Mobile Number</string>
+    <string name="login_tite">Login</string>
+    <string name="continue_login_msg">To Continue your account !</string>
+    <string name="sign_in_title">Sign In</string>
+    <string name="dont_account_msg">Don\'t have an account?</string>
+    <string name="create_account_msg">CreateAccount</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="existing_user">Already have an Account !</string>
+    <string name="register_culmyca">Register for Culmyca 20!</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="sign_out">Log Out</string>
+    <string name="please_wait">Wait</string>
+    <string name="sign_Guest">Sign In As  a Guest</string>
+
+    <string name="open">open</string>
+    <string name="well">Welcome</string>
+
+    <string name="contacts">Emergency Dials</string>
+    <string-array name="two_paths">
+        <item>Nomodular</item>
+        <item>Aid Helper</item>
+    </string-array>
+
+
+    <string-array name="choice_items">
+
+        <item>Medical aid </item>
+        <item>Food </item>
+        <item>Shelter</item>
+        <item>Clothes</item>
+        <item>Grocery</item>
+        <item>Vegetables and fruits</item>
+        <item>Miscellaneous</item>
+
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
+

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="40dp"
+        android:layout_weight="1"
+        android:src="@drawable/screen_logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+
+        android:layout_marginRight="20dp"
+        android:layout_weight="0.3"
+        android:gravity="left"
+        android:text="@string/login_tite"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="0.5"
+
+        android:gravity="left"
+        android:text="@string/continue_login_msg"
+        android:textColor="@color/colorPrimary"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="0.3"
+        android:gravity="bottom"
+        android:text="@string/mob_no"
+        android:textColor="@color/colorPrimary">
+
+    </TextView>
+    <EditText
+        android:id="@+id/Phone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="0.4"
+        android:drawableLeft="@drawable/ic_phone_black_24dp"
+        android:inputType="number"
+        android:textColor="@color/colorPrimaryDark" />
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:backgroundTint="#d11f08"
+        android:entries="@array/two_paths"
+        android:padding="5dp"
+        />
+
+    <Button
+        android:id="@+id/Submit"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+
+        android:layout_marginRight="40dp"
+        android:layout_weight="0.4"
+        android:background="@drawable/round_button"
+        android:text="@string/sign_in_title"
+        android:textColor="@color/white"
+        android:textSize="22dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:weightSum="3">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text1"
+            android:textSize="17sp"
+            android:layout_weight="2.5"
+            android:textAlignment="center"
+            android:layout_marginBottom="22dp"
+            android:text="No account yet? "
+
+            android:gravity="center_horizontal" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_weight=".5"
+            android:id="@+id/createacc"
+            android:layout_toRightOf="@id/text1"
+            android:layout_marginBottom="22dp"
+            android:text="Create Account"
+            />
+    </LinearLayout>
+
+</LinearLayout>

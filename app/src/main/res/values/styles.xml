@@ -6,6 +6,12 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorHint">@color/secondary_text</item>
+    </style>
+
+    <style name="CounterOverFlow" parent="TextAppearance.Design.Counter.Overflow">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/my_orange</item>
     </style>
 
 </resources>

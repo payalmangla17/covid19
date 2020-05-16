@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:androidx="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/about"
+        android:title="About"
+        androidx:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/Emergency_contacts"
+        android:icon="@drawable/contacts"
+        android:title="@string/contacts"
+        androidx:showAsAction="always" />
+    <item
+        android:id="@+id/help"
+        android:icon="@drawable/help"
+        android:title="Help Desk"
+        androidx:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/Corona"
+
+        android:icon="@drawable/updates"
+        android:title="Corona Updates"
+        androidx:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/Notifications"
+
+        android:icon="@drawable/notify"
+        android:title="Notifications"
+        androidx:showAsAction="ifRoom" />
+
+</menu>

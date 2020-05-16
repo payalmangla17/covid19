@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:layout_weight="1"
+        android:src="@drawable/screen_logo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:text="Welcome to COVID-19 Helper"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+         >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/help_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Full Name"
+                android:textColor="@color/black"
+                app:hintAnimationEnabled="true"
+                app:hintTextAppearance="@color/colorPrimaryDark" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    </LinearLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/help_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:textColor="@color/black"
+            app:hintAnimationEnabled="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+
+        app:counterMaxLength="10"
+        app:counterOverflowTextAppearance="@style/CounterOverFlow"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Phone1"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:inputType="number"
+            android:hint="Mobile Number"
+            app:hintAnimationEnabled="true" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+-->
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:backgroundTint="#d11f08"
+        android:entries="@array/two_paths"
+        android:padding="5dp"
+        />
+
+    <Button
+        android:id="@+id/btn_signUp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="40dp"
+        android:layout_weight="0.6"
+        android:background="@drawable/round_button"
+        android:text="@string/sign_up"
+        android:textColor="@color/white"
+        android:textSize="22dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:weightSum="3">
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.3"
+            android:textAlignment="textEnd"
+            android:text="Already have an account?"
+            android:textColor="@android:color/black"
+            android:textSize="17sp"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/signin"
+            android:layout_weight=".7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+            android:layout_toRightOf="@id/text"
+            android:text="  Log in"
+            android:textColor="@android:color/black"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
