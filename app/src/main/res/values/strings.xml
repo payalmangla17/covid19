@@ -17,7 +17,7 @@
     <string name="sign_in_title">Sign In</string>
     <string name="dont_account_msg">Don\'t have an account?</string>
     <string name="create_account_msg">CreateAccount</string>
-    <string name="sign_up">Sign Up</string>
+    <string name="sign_up">Register</string>
     <string name="existing_user">Already have an Account !</string>
     <string name="register_culmyca">Register for Culmyca 20!</string>
     <string name="enter_otp">Enter OTP</string>

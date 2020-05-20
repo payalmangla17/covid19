@@ -1,37 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<LinearLayout android:layout_width="match_parent"
+<RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+    <View
+        android:background="@drawable/bg"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="10dp"
         android:layout_weight="1"
-        android:src="@drawable/screen_logo" />
+        android:id="@+id/v1"
+        />
 
     <TextView
+        android:id="@+id/sahyog"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_weight="0.5"
-        android:gravity="center"
-        android:text="Welcome to COVID-19 Helper"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="22sp"
-        android:textStyle="bold" />
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="SAHYOG"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/white"
+        android:textSize="50sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/v1"
+        android:layout_margin="15dp"
+        android:background="@drawable/signupbg">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_below="@id/v1"
+        android:padding="15dp"
+        android:id="@+id/et1"
         >
 
         <com.google.android.material.textfield.TextInputLayout
@@ -39,6 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:background="@drawable/etbg"
 
          >
 
@@ -46,57 +56,82 @@
                 android:id="@+id/help_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Full Name"
+                android:hint="Name"
+                android:textAlignment="center"
+
                 android:textColor="@color/black"
                 app:hintAnimationEnabled="true"
-                app:hintTextAppearance="@color/colorPrimaryDark" />
+                app:hintTextAppearance="@color/colorPrimary1"
+                android:gravity="center_horizontal" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
 
 
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/et1"
+        android:padding="15dp"
+        android:id="@+id/et2"
+        >
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
-
+        android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_height="wrap_content">
+        android:background="@drawable/etbg">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/help_age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Age"
+            android:textAlignment="center"
+
             android:textColor="@color/black"
-            app:hintAnimationEnabled="true" />
+            app:hintAnimationEnabled="true"
+            app:hintTextAppearance="@color/colorPrimary1"
+            android:gravity="center_horizontal"  />
     </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:counterEnabled="true"
-
-        app:counterMaxLength="10"
-        app:counterOverflowTextAppearance="@style/CounterOverFlow"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/Phone1"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:inputType="number"
-            android:hint="Mobile Number"
-            app:hintAnimationEnabled="true" />
+            android:orientation="horizontal"
+            android:layout_below="@id/et2"
+            android:padding="15dp"
+            android:id="@+id/et3"
+            >
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/etbg"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/Phone1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mobile Number"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    app:hintAnimationEnabled="true"
+                    android:inputType="phone"
+                    app:hintTextAppearance="@color/colorPrimary1"
+                    android:gravity="center_horizontal"  />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
 
 
--->
-    <Spinner
+        <Spinner
         android:id="@+id/spinner2"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
@@ -106,22 +141,23 @@
         android:padding="5dp"
         />
 
-    <Button
-        android:id="@+id/btn_signUp"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginRight="40dp"
-        android:layout_weight="0.6"
-        android:background="@drawable/round_button"
-        android:text="@string/sign_up"
-        android:textColor="@color/white"
-        android:textSize="22dp" />
+        <Button
+            android:id="@+id/btn_signUp"
 
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:layout_weight="0.55"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btnstyle"
+            android:text="@string/sign_up"
+            android:textColor="@color/white"
+            android:textSize="22dp" />
 
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -154,4 +190,4 @@
     </LinearLayout>
 
 
-</LinearLayout>
+</RelativeLayout>

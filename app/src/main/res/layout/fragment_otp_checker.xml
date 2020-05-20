@@ -3,12 +3,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#fdd1d1d1"
+
     android:elevation="4dp">
+    <!--android:background="#fdd1d1d1"-->
+
+
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:background="@drawable/otp_chekker"
+
         android:layout_height="350dp">
 
         <ImageView
@@ -32,12 +35,27 @@
             android:textSize="16dp"
             android:textStyle="bold"
             android:gravity="center_horizontal" />
+        <TextView
+            android:id="@+id/tv_display_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_heading_view"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:text="A message with a 6-digit verification code has been sent to your device. Please enter the code and continue!!"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="13dp"
+            android:gravity="center_horizontal" />
 
         <LinearLayout
             android:id="@+id/ll_edit_texts"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_heading_view"
+            android:layout_below="@id/tv_display_text"
             android:layout_marginStart="40dp"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="12dp"
@@ -52,7 +70,8 @@
                 android:background="@drawable/otp_edit_text_background"
                 android:inputType="number"
                 android:maxLength="6"
-
+                android:shadowDx="20"
+                android:shadowDy="20"
                 android:nextFocusDown="@+id/et_otp_dig_2"
                 android:padding="4dp"
 
@@ -75,27 +94,12 @@
             android:textStyle="bold"
             android:gravity="center_horizontal" />
 
+
         <TextView
-            android:id="@+id/tv_display_text"
+            android:id="@+id/tv_otp_resend1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_check_otp"
-            android:layout_marginStart="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginRight="30dp"
-            android:text="A message with a verification code has been sent to your device. Please enter the code and continue!!"
-            android:textAlignment="center"
-            android:textColor="#000"
-            android:textSize="13dp"
-            android:gravity="center_horizontal" />
-
-        <TextView
-            android:id="@+id/tv_otp_resend"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_display_text"
             android:layout_marginTop="6dp"
             android:padding="6dp"
             android:text="Didn't get a verification code?"
@@ -103,6 +107,19 @@
             android:textColor="#000"
             android:textSize="12dp"
             android:textStyle="bold"
+            android:gravity="center_horizontal" />
+        <TextView
+            android:id="@+id/tv_otp_resend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_otp_resend1"
+            android:layout_marginTop="6dp"
+            android:padding="3dp"
+            android:text="Resend OTP"
+            android:textAlignment="center"
+            android:textColor="#95DC4A"
+            android:textSize="15dp"
+
             android:gravity="center_horizontal" />
 
     </RelativeLayout>

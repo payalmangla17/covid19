@@ -1,40 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-
     android:orientation="vertical">
 
     <View
         android:background="@drawable/bg"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
         android:layout_gravity="center"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="30dp"
         android:layout_weight="1"
+        android:id="@+id/v1"
+        />
 
-
-         />
     <TextView
+        android:id="@+id/sahyog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:text="SAHYOG"
-        android:textSize="20sp"
-        android:id="@+id/sahyog"
+        android:layout_marginTop="50dp"
         android:textColor="@color/white"
-        android:gravity="center_horizontal" />
-
+        android:textSize="50sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/v1"
+        android:weightSum="1">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginLeft="20dp"
-
+        android:layout_marginBottom="20dp"
         android:layout_marginRight="20dp"
-        android:layout_weight="0.3"
+        android:layout_weight="0.22"
         android:gravity="left"
         android:text="@string/login_tite"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorPrimary1"
         android:textSize="30dp"
         android:textStyle="bold" />
 
@@ -43,25 +47,27 @@
         android:layout_height="0dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_weight="0.5"
+        android:layout_weight="0.2"
+
+        android:layout_marginBottom="20dp"
 
         android:gravity="left"
         android:text="@string/continue_login_msg"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/colorPrimary1"
         android:textSize="22sp"
         android:textStyle="bold" />
 
-    <TextView
+   <!-- <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_weight="0.3"
-        android:gravity="bottom"
+        android:layout_weight="0.2"
+        android:gravity="center_vertical"
         android:text="@string/mob_no"
-        android:textColor="@color/colorPrimary">
+        android:textColor="@color/colorPrimary1">
 
-    </TextView>
+    </TextView>-->
     <EditText
         android:id="@+id/Phone"
         android:layout_width="match_parent"
@@ -69,10 +75,12 @@
         android:layout_gravity="center"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_weight="0.4"
+        android:layout_weight="0.29"
         android:drawableLeft="@drawable/ic_phone_black_24dp"
         android:inputType="number"
-        android:textColor="@color/colorPrimaryDark" />
+        android:hint="Mobile Number"
+        android:paddingTop="20dp"
+         />
     <Spinner
         android:id="@+id/spinner"
         android:layout_marginTop="20dp"
@@ -83,22 +91,22 @@
         android:padding="5dp"
         />
 
-    <Button
-        android:id="@+id/Submit"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
+        <Button
+            android:id="@+id/Submit"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="40dp"
 
-        android:layout_marginRight="40dp"
-        android:layout_weight="0.4"
-        android:background="@drawable/round_button"
-        android:text="@string/sign_in_title"
-        android:textColor="@color/white"
-        android:textSize="22dp" />
+            android:layout_weight="0.29"
+            android:background="@drawable/btnstyle"
 
+            android:text="@string/sign_in_title"
+            android:textColor="@color/white"
+            android:textSize="22dp" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -130,4 +138,5 @@
             />
     </LinearLayout>
 
-</LinearLayout>
+
+</RelativeLayout>

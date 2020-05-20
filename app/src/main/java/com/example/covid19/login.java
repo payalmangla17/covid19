@@ -76,7 +76,7 @@ public class login extends AppCompatActivity {
             Log.d(TAG, "onAuthStateChanged:signed_out");
 
         }
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.ui);
         getSupportActionBar().hide();
         // Restore instance state
         if (savedInstanceState != null) {
