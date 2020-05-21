@@ -29,67 +29,66 @@
         android:orientation="vertical"
         android:layout_below="@id/v1"
         android:weightSum="1">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_weight="0.22"
-        android:gravity="left"
-        android:text="@string/login_tite"
-        android:textColor="@color/colorPrimary1"
-        android:textSize="30dp"
-        android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="0.22"
+            android:gravity="left"
+            android:text="@string/login_tite"
+            android:textColor="#E8B575"
+            android:textSize="30dp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_weight="0.2"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="0.2"
 
-        android:layout_marginBottom="20dp"
+            android:layout_marginBottom="20dp"
 
-        android:gravity="left"
-        android:text="@string/continue_login_msg"
-        android:textColor="@color/colorPrimary1"
-        android:textSize="22sp"
-        android:textStyle="bold" />
+            android:gravity="left"
+            android:text="@string/continue_login_msg"
+            android:textColor="#E8B575"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
-   <!-- <TextView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_weight="0.2"
-        android:gravity="center_vertical"
-        android:text="@string/mob_no"
-        android:textColor="@color/colorPrimary1">
-
-    </TextView>-->
-    <EditText
-        android:id="@+id/Phone"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_weight="0.29"
-        android:drawableLeft="@drawable/ic_phone_black_24dp"
-        android:inputType="number"
-        android:hint="Mobile Number"
-        android:paddingTop="20dp"
-         />
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:backgroundTint="#d11f08"
-        android:entries="@array/two_paths"
-        android:padding="5dp"
-        />
+        <!-- <TextView
+             android:layout_width="match_parent"
+             android:layout_height="0dp"
+             android:layout_marginLeft="20dp"
+             android:layout_marginRight="20dp"
+             android:layout_weight="0.2"
+             android:gravity="center_vertical"
+             android:text="@string/mob_no"
+             android:textColor="@color/colorPrimary1">
+         </TextView>-->
+        <EditText
+            android:id="@+id/Phone"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="0.29"
+            android:drawableLeft="@drawable/ic_phone_black_24dp"
+            android:inputType="number"
+            android:hint="Mobile Number"
+            android:paddingTop="20dp"
+            />
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:backgroundTint="#d11f08"
+            android:entries="@array/two_paths"
+            android:padding="5dp"
+            />
 
         <Button
             android:id="@+id/Submit"

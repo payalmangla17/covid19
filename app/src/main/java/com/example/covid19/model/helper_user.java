@@ -3,7 +3,9 @@ package com.example.covid19.model;
 public class helper_user
 {
     public String full_name,mobile_no,Age;
+    public helper_user(){
 
+    }
     public helper_user(String full_name, String mobile_no, String age) {
         this.full_name = full_name;
         this.mobile_no = mobile_no;

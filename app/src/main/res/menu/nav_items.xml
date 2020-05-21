@@ -26,8 +26,8 @@
     <item
         android:id="@+id/Notifications"
 
-        android:icon="@drawable/notify"
-        android:title="Notifications"
+        android:icon="@drawable/account"
+        android:title="Profile"
         androidx:showAsAction="ifRoom" />
 
 </menu>

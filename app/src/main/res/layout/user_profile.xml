@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        style="@style/bar"
+    >
+    <View
+        android:background="@drawable/bg"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:layout_weight="1"
+        android:id="@+id/v1"
+        />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:layout_centerHorizontal="true"
+    android:text="Profile"
+    android:textStyle="bold"
+    android:layout_marginTop="30dp"
+    android:textSize="30sp"
+    android:textColor="@color/white"/>
+        <androidx.cardview.widget.CardView
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_marginTop="100dp"
+
+            android:background="@drawable/otp_edit_text_background"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:padding="27dp"
+                >
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:padding="10dp"
+                    android:src="@drawable/camera"
+                    android:background="@drawable/otp_edit_text_background"
+                    android:id="@+id/profile_image"/>
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/profile_image"
+                    android:paddingLeft="20dp"
+                    android:text="jhbfdjj"
+                    android:textColor="#d11f08"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:id="@+id/mobno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/profile_image"
+                    android:layout_below="@id/name"
+                    android:paddingTop="10dp"
+                    android:textColor="#d11f08"
+                    android:textSize="20sp"
+                    android:paddingLeft="20dp"
+                    android:text="jhbfdjj"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/uname"
+                    android:layout_below="@id/profile_image"
+                    android:text="Name"
+                    android:paddingTop="30dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profile_image"
+                   android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/uname"
+
+                    android:id="@+id/euname"
+                    android:paddingTop="28dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DOB"
+                    android:id="@+id/dob"
+                    android:layout_below="@id/uname"
+                    android:paddingTop="30dp"/>
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edob"
+                    android:paddingTop="20dp"
+                    android:layout_marginLeft="1dp"
+                    android:minLines="1"
+                    android:maxLines="1"
+                    android:layout_toRightOf="@id/dob"
+                    android:layout_below="@id/euname"/>
+
+                <RadioGroup
+                    android:paddingTop="20dp"
+                    android:id="@+id/groupradio"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/euname"
+                    android:layout_toRightOf="@id/edob">
+
+                <!-- In RadioGroup create the 1 Radio Button-->
+                <!-- like this we will add some more Radio Button-->
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radia_id2"
+
+                        android:text="Female"
+
+                        />
+                <RadioButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radia_id1"
+                    android:text="Male"
+                    />
+
+
+
+                </RadioGroup>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:layout_below="@id/dob"
+                    android:paddingTop="30dp"
+                    android:id="@+id/address"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/address"
+                    android:layout_below="@id/edob"
+                    android:layout_marginLeft="10dp"
+                    android:maxLines="1"
+
+                    android:id="@+id/eadd"
+                    android:maxLength="40"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="City"
+                    android:layout_below="@id/address"
+                    android:paddingTop="30dp"
+                    android:id="@+id/city"/>
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/city"
+                    android:layout_below="@id/eadd"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/ecity"
+                    android:maxLength="40"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PIN"
+                    android:layout_below="@id/address"
+                    android:layout_toRightOf="@id/ecity"
+                    android:layout_marginLeft="10dp"
+                    android:paddingTop="30dp"
+                    android:id="@+id/pin"/>
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/pin"
+                    android:layout_below="@id/eadd"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/epin"
+                    android:maxLength="6"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Location"
+                    android:layout_below="@id/city"
+                    android:paddingTop="30dp"
+                    android:id="@+id/location"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/location"
+                    android:layout_below="@id/ecity"
+                    android:layout_marginLeft="10dp"
+                    android:paddingTop="20dp"
+                    android:id="@+id/elocation"
+                    android:maxLength="40"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_centerHorizontal="true"
+        android:text="Save"
+        android:id="@+id/save"
+        android:textColor="@color/white"
+        android:background="@drawable/btnstyle"/>
+</RelativeLayout>
+</FrameLayout>
+

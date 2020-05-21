@@ -339,6 +339,7 @@ public class SignUp extends AppCompatActivity {
                             Intent inten = new Intent(SignUp.this, MainActivity.class);
                             inten.putExtra("mmobile", phoneno.getText().toString());
                             inten.putExtra("choice", variable);
+                            inten.putExtra("firsttime","1");
                             finish();
                             startActivity(inten);
                             // ...

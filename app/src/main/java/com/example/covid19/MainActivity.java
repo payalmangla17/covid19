@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
@@ -37,8 +38,14 @@ public class MainActivity extends AppCompatActivity {
         final int var = getIntent().getIntExtra("choice", 1);
 
         final String mmobile = getIntent().getStringExtra("mmobile");
-
+        final String ft=getIntent().getStringExtra("firsttime");
         getSupportFragmentManager().beginTransaction().replace(R.id.frame,new About()).commit();
+     /*   if(reff.child("user_profile")==null){
+            Toast.makeText(MainActivity.this,"Please update profile first.",Toast.LENGTH_SHORT).show();
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame,new user_profile()).commit();
+           // finish();
+        }*/
+        Toast.makeText(MainActivity.this,"If profile is not updated, please update profile first.",Toast.LENGTH_LONG).show();
 
         navView=findViewById(R.id.bottom_navigation);
         navView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -65,8 +72,11 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.Notifications:
                         // Toast.makeText(MainActivity.this, "help", Toast.LENGTH_SHORT).show();
-                        selectedFragment = new Notifications();
+                       selectedFragment = new user_profile();
+                     //   startActivity(new Intent(MainActivity.this,user_profile.class));
+                       // return true;
                         break;
+
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.frame,selectedFragment).commit();
                 return true;
@@ -101,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     if (dataSnapshot.exists()) {
-                        Toast.makeText(MainActivity.this, "Welcome !!", Toast.LENGTH_SHORT).show();
+                      //  Toast.makeText(MainActivity.this, "Welcome !!", Toast.LENGTH_SHORT).show();
                         Log.e("bro", "code");
 
 
@@ -156,6 +166,12 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }
+
+        if(ft=="0"){
+            Toast.makeText(MainActivity.this,"Please update profile first.",Toast.LENGTH_SHORT).show();
+            getSupportFragmentManager().beginTransaction().replace(R.id.frame,new user_profile()).commit();
+            //  finish();
+        }
     }
     String mobile_num;
     int variable;
@@ -183,5 +199,7 @@ public class MainActivity extends AppCompatActivity {
         else
             return false;
 
+
     }
+
 }

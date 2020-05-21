@@ -336,6 +336,7 @@ public class login extends AppCompatActivity {
                             Intent inten = new Intent(login.this, MainActivity.class);
                             inten.putExtra("mmobile", phone.getText().toString());
                             inten.putExtra("choice", variable);
+                            inten.putExtra("firsttime","0");
                             finish();
                             startActivity(inten);
 
