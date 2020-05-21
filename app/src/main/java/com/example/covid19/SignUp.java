@@ -74,7 +74,9 @@ public class SignUp extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
-                startActivity(new Intent(SignUp.this,login.class));
+                Intent i=new Intent(SignUp.this,login.class);
+                i.putExtra("spinnerval",variable);
+                startActivity(i);
             }
         });
 
@@ -84,25 +86,17 @@ public class SignUp extends AppCompatActivity {
 
         signup = findViewById(R.id.btn_signUp);
         mAuth = FirebaseAuth.getInstance();
+        final int spin=getIntent().getIntExtra("spinup",1);
+        if(spin==1){
+            variable=1;
+            spinner.setSelection(0);
+        }
+        else{
+            variable=2;
+            spinner.setSelection(1);
+        }
 
-       /* signupRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot)
-            {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                String value = dataSnapshot.toString();
-                // String value = dataSnapshot.getValue(String.cvalass);
-                Log.d(TAG, "sign up value read  is: " + value);
-            }
 
-            @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.w(TAG, "Failed to read value.", error.toException());
-            }
-        });
-*/
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -368,32 +362,7 @@ public class SignUp extends AppCompatActivity {
 
         return true;
     }
-    /* private void registerMobile() {
-         mob_no = "+91" + phoneno.getText().toString();
-         name = t_name.getText().toString();
-         age = t_age.getText().toString();
 
-         Log.e("registerMobile", "mob_no length  :" + mob_no.length() + " mob no: " + mob_no);
-
-         if (TextUtils.isEmpty(name) || TextUtils.isEmpty(age)) {
-             Toast.makeText(SignUp.this, "empty fields required", Toast.LENGTH_SHORT).show();
-             return;
-         }
-
-         if (mob_no.length() != 13) {
-             Toast.makeText(this, "Enter a valid 10 digit number", Toast.LENGTH_SHORT).show();
-             return;
-         }
-
-         Toast.makeText(this, "Please wait !!", Toast.LENGTH_SHORT).show();
-         PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                 mob_no,        // Phone number to verify
-                 60,                 // Timeout duration
-                 TimeUnit.SECONDS,   // Unit of timeout
-                 this,               // Activity (for callback binding)
-                 mCallbacks);        // OnVerificationStateChangedCallbacks
-     }
- */
     public class CustomOnItemSelectedListener implements AdapterView.OnItemSelectedListener {
 
         String firstItem = String.valueOf(spinner.getSelectedItem());

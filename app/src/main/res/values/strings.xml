@@ -30,8 +30,8 @@
 
     <string name="contacts">Emergency Dials</string>
     <string-array name="two_paths">
-        <item>Nomodular</item>
-        <item>Aid Helper</item>
+        <item>I can help</item>
+        <item>I need help</item>
     </string-array>
 
 

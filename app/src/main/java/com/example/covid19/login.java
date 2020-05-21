@@ -82,22 +82,34 @@ public class login extends AppCompatActivity {
         if (savedInstanceState != null) {
             onRestoreInstanceState(savedInstanceState);
         }
-
+        spinner1 = (Spinner) findViewById(R.id.spinner);
+        spinner1.setOnItemSelectedListener(new CustomOnItemSelectedListener());
         //final Intent i = new Intent(this, SignUp.class);
         signin=findViewById(R.id.Submit);
 
         phone=findViewById(R.id.Phone);
         mFdatabase=FirebaseDatabase.getInstance();
         createAcc=findViewById(R.id.createacc);
+
+        mAuth = FirebaseAuth.getInstance();
+        final int spin=getIntent().getIntExtra("spinnerval",1);
+        if(spin==1){
+            variable=1;
+            spinner1.setSelection(0);
+        }
+        else{
+            variable=2;
+            spinner1.setSelection(1);
+        }
         createAcc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
-                startActivity(new Intent(login.this,SignUp.class));
+                Intent i=new Intent(login.this,SignUp.class);
+                i.putExtra("spinup",variable);
+                startActivity(i);
             }
         });
-        mAuth = FirebaseAuth.getInstance();
-
 
 
         signin.setOnClickListener(new View.OnClickListener() {
@@ -123,8 +135,7 @@ public class login extends AppCompatActivity {
 
 
 
-        spinner1 = (Spinner) findViewById(R.id.spinner);
-        spinner1.setOnItemSelectedListener(new CustomOnItemSelectedListener());
+
 
         mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 
@@ -364,25 +375,7 @@ public class login extends AppCompatActivity {
         return true;
     }
 
-    /*   String mob_no;
 
-       private void registerMobile() {
-           mob_no = "+91" + numberToLogin.getText().toString().trim();
-
-           if (mob_no.length() != 13) {
-               Toast.makeText(this, "Enter a valid 10 digit number", Toast.LENGTH_SHORT).show();
-               return;
-           }
-
-
-           PhoneAuthProvider.getInstance().verifyPhoneNumber(
-                   mob_no,        // Phone number to verify
-                   60,                 // Timeout duration
-                   TimeUnit.SECONDS,   // Unit of timeout
-                   this,               // Activity (for callback binding)
-                   mCallbacks);        // OnVerificationStateChangedCallbacks
-       }
-   */
     private void resendVerificationCode(String phoneNumber,
                                         PhoneAuthProvider.ForceResendingToken token) {
         PhoneAuthProvider.getInstance().verifyPhoneNumber(

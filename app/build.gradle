@@ -9,6 +9,7 @@ android {
         applicationId "com.example.covid19"
         minSdkVersion 16
         targetSdkVersion 29
+        multiDexEnabled true
         versionCode 1
         versionName "1.0"
 
@@ -46,5 +47,5 @@ dependencies {
     implementation 'com.google.android.material:material:1.1.0'
     implementation 'de.hdodenhof:circleimageview:1.2.1'
     implementation 'com.google.firebase:firebase-storage:16.0.3'
-
+    implementation 'com.github.AppIntro:AppIntro:6.0.0'
 }
