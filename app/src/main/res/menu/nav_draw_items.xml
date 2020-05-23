@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group></group>
+    <group>
+
+        <item
+            android:id="@+id/myprofile"
+            android:title="My Profile"
+            android:icon="@drawable/my_profile"
+            app:showAsAction="ifRoom"/>
+        <item
+            android:id="@+id/Emergency_contacts"
+            android:title="Emergency Contacts"
+            android:icon="@drawable/contacts"
+            app:showAsAction="ifRoom"/>
+        <item
+            android:id="@+id/dnotifications"
+            android:title="Notifications"
+            android:icon="@drawable/notify"
+            app:showAsAction="ifRoom"/>
+        <item
+            android:id="@+id/drhelp"
+            android:title="I need help"
+            android:icon="@drawable/rhelp"
+            android:actionLayout="@layout/switch_layout"
+            app:actionViewClass="android.widget.Switch" />
+        <item
+            android:id="@+id/dchelp"
+            android:title="I can help"
+            android:icon="@drawable/chelp"
+            app:actionViewClass="android.widget.Switch"
+            android:actionLayout="@layout/switch_layout"/>
+        <item
+            android:id="@+id/dfamily_details"
+            android:title="Family Details"
+            android:icon="@drawable/family"
+            app:showAsAction="ifRoom"/>
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/settings"
+            android:title="Settigs"
+            app:showAsAction="ifRoom"/>
+        <item
+            android:id="@+id/dsign_out"
+            android:title="Sign Out"
+            android:icon="@drawable/signout"
+            app:showAsAction="ifRoom"/>
+
+
+    </group>
+
+</menu>

@@ -30,8 +30,8 @@
 
     <string name="contacts">Emergency Dials</string>
     <string-array name="two_paths">
-        <item>I can help</item>
         <item>I need help</item>
+        <item>I can help</item>
     </string-array>
 
 

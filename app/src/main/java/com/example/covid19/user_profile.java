@@ -19,6 +19,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import com.example.covid19.model.helper_user;
@@ -50,12 +51,13 @@ public class user_profile extends Fragment{
     ImageView photo;
     TextView pname,mobno;
     private FirebaseStorage firebaseStorage;
-    @Override
+    Toolbar toolbar;
+   /* @Override
     public void onResume() {
         super.onResume();
         ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
 
-    }
+    }*/
 
 
     @Nullable
@@ -75,6 +77,13 @@ public class user_profile extends Fragment{
         databaseReference = FirebaseDatabase.getInstance().getReference();
         pname=view.findViewById(R.id.name);
         mobno= view.findViewById(R.id.mobno);
+      /*  toolbar = (Toolbar) view.findViewById(R.id.toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().onBackPressed();
+            }
+        });*/
         reff.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
