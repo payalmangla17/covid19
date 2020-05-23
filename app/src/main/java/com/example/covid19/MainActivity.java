@@ -107,10 +107,16 @@ public class MainActivity extends AppCompatActivity {
                    case R.id.myprofile:
                        Fragment f= new user_profile();
                        getSupportFragmentManager().beginTransaction().replace(R.id.frame,f).commit();
+
+                       MenuItem m=navView.getMenu().getItem(4);
+                       m.setChecked(true);
                        break;
                    case R.id.Emergency_contacts:
                        Fragment f1= new EmergencyDials();
                        getSupportFragmentManager().beginTransaction().replace(R.id.frame,f1).commit();
+
+                       MenuItem m1=navView.getMenu().getItem(1);
+                       m1.setChecked(true);
                        break;
                    case R.id.dnotifications:
                        Fragment f2= new Notifications();
@@ -156,13 +162,13 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.help:
                         //  Toast.makeText(MainActivity.this, "help", Toast.LENGTH_SHORT).show();
                         //     startActivity(new Intent(MainActivity.this,AutocompleteFragment.class));
-                        selectedFragment=new help_desk();
+                        selectedFragment=new HelpDesk();
                         break;
                     case R.id.Corona:
                         //  Toast.makeText(MainActivity.this, "updates", Toast.LENGTH_SHORT).show();
                         selectedFragment = new CoronaUpdates();
                         break;
-                    case R.id.Notifications:
+                    case R.id.user_prof:
                         // Toast.makeText(MainActivity.this, "help", Toast.LENGTH_SHORT).show();
                        selectedFragment = new user_profile();
                      //   startActivity(new Intent(MainActivity.this,user_profile.class));

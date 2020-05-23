@@ -24,7 +24,7 @@
         android:title="Corona Updates"
         androidx:showAsAction="ifRoom" />
     <item
-        android:id="@+id/Notifications"
+        android:id="@+id/user_prof"
 
         android:icon="@drawable/account"
         android:title="Profile"

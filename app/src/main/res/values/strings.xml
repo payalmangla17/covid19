@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">covid19</string>
+    <string name="app_name">Sahyog</string>
     <string name="background">background</string>
     <string name="selfel">NOACTIONBAR</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
